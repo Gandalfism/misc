@@ -110,13 +110,11 @@ incorrect = 'Alabama - 9 votes, Alaska - 3 votes, Arizona - 11 votes, Arkansas -
 actual_list = actual.split(' votes\n\n')
 for i in range(len(actual_list)):
   actual_list[i] = actual_list[i].split(' - ')
-actual_list.sort()
 
 #Cleaning up the incorrect data into netsted lists with ready to go key-value pairs
 incorrect_list = incorrect.split(' votes, ')
 for i in range(len(incorrect_list)):
   incorrect_list[i] = incorrect_list[i].split(' - ')
-incorrect_list.sort()
 
 #Turning the nested lists into dictinoaries
 actual_dict={i[0]:i[1] for i in actual_list}
